@@ -1989,12 +1989,12 @@ XeonBotInc.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${s
       case 'ورع':
       case 'شاذ':
       case 'علق':
-      case 'متناك':
+      case 'اهبل':
       case 'خول':
       case 'وسخ':
       case 'مكروف':
-      case 'بيتناك':
-      case 'كس':
+      case 'طفل':
+      case 'مزه':
       case 'معرص':
       case 'شرموط':
       case 'اهطل':
@@ -2957,7 +2957,7 @@ replay('النجاح في إيقاف تشغيل جميع مضادات الروا
   }
   }
   break
-case 'antivirus': case 'الهكر': {
+case 'المضاد': case 'الهكر': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
@@ -3203,7 +3203,7 @@ if (isBanChat) return reply(mess.banChat)
 }
   break
 
-            case 'مسح': case 'del': {
+            case 'مسح': case 'حذف': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) reply(false)
@@ -3531,7 +3531,7 @@ let media = await quoted.download()
 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(encmedia)
 } else {
-reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo Duration 1-9 Seconds`)
+reply(`إرسال صورة / فيديو   ${prefix + command}\nلا يتعدى 10 ثواني`)
 }
 }
 break
@@ -10601,7 +10601,8 @@ case 'tqtt':
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 reply(`شكرا لنفسي🥺💕
-واخويا عبضو 🤡
+واخواني  🤡
+اياتو ولوفي والجزار
 وشكرا ليك ياللي بتستخدم البوت🌚💕 `)
 break
             default:
