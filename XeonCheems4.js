@@ -2288,7 +2288,7 @@ if (isBanChat) return reply(mess.banChat)
           reply(`Exif Has Been Successfully Changed to\n\n${themeemoji} Packname : ${global.packname}\n${themeemoji} Author : ${global.author}`)
             }
             break
-	case 'طرد': case 'اطرد': {
+	case 'طرد': case 'انقلع': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2298,7 +2298,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'اضافه': {
+	case 'اضافة': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2308,7 +2308,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'رفع': {
+	case 'ترقيه': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2318,7 +2318,7 @@ if (isBanChat) return reply(mess.banChat)
 		await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'تنزيل': {
+	case 'اقاله': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 		if (!m.isGroup) return replay(`${mess.group}`)
@@ -2389,22 +2389,22 @@ if (isBanChat) return reply(mess.banChat)
                 reply(mess.success)
                 }
                 break
-            case 'تاك': {
+            case 'منشن': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ تاك للكل ♥●•٠·˙«╝ 
+let teks = `*｢منشن جماعي｣* 
  
- ➲ *الرساله : ${q ? q : 'no message'}*\n\n`
+ ➲ *الرساله : ${q ? q : 'لا توجد رساله'}*\n\n`
                 for (let mem of participants) {
                 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
                 }
                 XeonBotInc.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break
-                case 'وهمي': case 'منشن.وهمي': {
+                case 'وهمي': case 'مخفي': {
                 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             if (!m.isGroup) return replay(`${mess.group}`)
@@ -2926,7 +2926,7 @@ replay('النجاح في إيقاف موقع تويتر antilink في هذه ا
   }
   }
   break
-              case 'الروابط': {
+              case 'الحمايه': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
@@ -2935,7 +2935,7 @@ if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
 if (AntiLinkTwitter) return replay('بالفعل نشط!! ')
 ntilinkall.push(from)
-replay('النجاح في تشغيل جميع مضادات الروابط في هذه المجموعة')
+replay('النجاح في تشغيل حماية مضادات الروابط في هذه المجموعة')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -3518,7 +3518,7 @@ encmedia = await XeonBotInc.sendImageAsSticker(from, wifegerakx, m, { packname: 
 await fs.unlinkSync(encmedia)
 }
 break
-            case 'sticker': case 's': case 'stickergif': case 'استيكر': {
+            case 'ملصق': case 's': case 'س': case 'ستيكر': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (/image/.test(mime)) {
@@ -3535,7 +3535,7 @@ reply(`إرسال صورة / فيديو مع شرح ${prefix + command}\nVideo D
 }
 }
 break
-case 'swm': case 'سرقه': case 'سرقة': {
+case 'swm': case 'زرف': case 'سرقة': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args.join(" ")) return reply(`مثال :\nswm ${global.author}|${global.packname}`)
